@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llava"
-version = "0.0.1"
+#version = "0.0.1"
 description = "Towards GPT-4 like large language and visual assistant."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -13,10 +13,12 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
-    "accelerate", "fastapi", "gradio==3.23", "markdown2[all]", "numpy",
+    "accelerate", "fastapi[all]", "gradio==3.23", "markdown2[all]", "numpy",
     "requests", "sentencepiece", "tokenizers==0.12.1",
     "torch", "torchvision", "uvicorn", "wandb",
-    "transformers @ git+https://github.com/haotian-liu/transformers_llava.git@988b6abb3b7da9a5cbb5051e994706f7f88c2565"
+    "transformers @ git+https://github.com/haotian-liu/transformers_llava.git@988b6abb3b7da9a5cbb5051e994706f7f88c2565",
+    "jsonschema>=4.8.0",
+    "fastfuzzysearch @ git+https://github.com/eyalatox/fastfuzzysearch.git
 ]
 
 [project.urls]
